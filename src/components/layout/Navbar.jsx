@@ -1,13 +1,22 @@
 import React from "react";
 import PropTypes from "prop-types";
+import { Link } from "react-router-dom";
 
 const Navbar = ({ icon, title }) => {
   return (
-    <nav className="Navbar bg-primary" style={{ height: "50px" }}>
+    <nav className="navbar bg-primary" style={{ height: "50px" }}>
       <h1>
         <i className={icon} style={{ padding: "13px 10px 10px 30px" }} />
         {title}
       </h1>
+      <ul>
+        <li>
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="/about">About</Link>
+        </li>
+      </ul>
     </nav>
   );
 };
