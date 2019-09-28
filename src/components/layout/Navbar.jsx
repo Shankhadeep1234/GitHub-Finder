@@ -5,10 +5,12 @@ import { Link } from "react-router-dom";
 const Navbar = ({ icon, title }) => {
   return (
     <nav className="navbar bg-primary" style={{ height: "50px" }}>
-      <h1>
-        <i className={icon} style={{ padding: "13px 10px 10px 30px" }} />
-        {title}
-      </h1>
+      <Link to="/">
+        <h1>
+          <i className={icon} style={{ padding: "13px 10px 10px 30px" }} />
+          {title}
+        </h1>
+      </Link>
       <ul>
         <li>
           <Link to="/">Home</Link>
